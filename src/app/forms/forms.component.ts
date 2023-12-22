@@ -9,7 +9,7 @@ export class FormsComponent {
   userRole = '';
   iframeSrc = '';
   
-  users = [];
+  users:string[] = [];
 
   onUpdateUserName(event: any) {
     this.userName = event;
@@ -19,5 +19,10 @@ export class FormsComponent {
   onUpdateUserRole(event: any) {
     this.userRole = event;
     console.log(this.userRole);
+  }
+
+  addUser() {
+    this.users.push(this.userName);
+    console.log(this.users);
   }
 }

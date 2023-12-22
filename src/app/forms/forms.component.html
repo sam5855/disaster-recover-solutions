@@ -1,17 +1,20 @@
 <h4>Document Builder</h4>
 
-<label for="userName">Name: </label>
-<input type="text" id="userName" (input)="onUpdateUserName($event)">
-<br>
+<form (submit)="addUser()">
+    <label for="userName">Name: </label>
+    <input type="text" id="userName" (input)="onUpdateUserName($event)"/>
+    <br>
 
-<label for="userRole">Select Role: </label>
-<select id="userRole" (change)="onUpdateUserRole($event)">
-    <option value="buyer">Buyer</option>
-    <option value="seller">Seller</option>
-    <option value="investor">Investor</option>
-</select>
-<br>
-<button type="submit">Submit</button>
+    <label for="userRole">Select Role: </label>
+    <select id="userRole" (change)="onUpdateUserRole($event)">
+        <option></option>
+        <option value="buyer">Buyer</option>
+        <option value="seller">Seller</option>
+        <option value="investor">Investor</option>
+    </select>
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
 <p>{{users}}</p>
 
 
